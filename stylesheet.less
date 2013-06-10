@@ -202,7 +202,7 @@ header .widget.button button {
 
 header {
   padding: 0;
-  background-color: lighten(@color-swatch2,3%);
+  background-color: @color-swatch7;
   background-image: image('/images/header-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
@@ -375,7 +375,7 @@ header .widget.extendednavigation {
   font-size: @font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
   letter-spacing: @font-swatch6-letter-spacing;
-  color: @color-swatch1;
+  color: @color-swatch6;
   text-transform: uppercase;
 }
 
@@ -464,8 +464,11 @@ header .widget.extendednavigation {
   text-align: center;
 }
 
+
 .widget.feature button
 {
+  display: none;
+  /*
   display: block;
   padding: 6px 20px 6px 8px;
   margin: 0;
@@ -482,13 +485,7 @@ header .widget.extendednavigation {
   color: @color-swatch1;
   text-decoration: none;
   letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.2);
-}
-
-.widget.feature button:hover
-{
-  background-color: darken(@color-swatch3,2%);
-  cursor: pointer;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.2);*/
 }
 
 /* ===============================
