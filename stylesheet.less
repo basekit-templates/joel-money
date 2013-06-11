@@ -117,7 +117,7 @@ section.main {
 
 
 section.main .content-bg {
-  background-color: lighten(@color-swatch2,73%);
+  background-color: lighten(@color-swatch2,70%);
   padding: 30px;
 }
 
@@ -1184,10 +1184,11 @@ hr.line.align-right {
     margin-bottom: 0;
   } 
 
+  /*
   .columns-two-right .widget.content {
     border-top: 2px solid lighten(@color-swatch2,68%);
     padding-top: 40px;
-  }
+  }*/
 
   .widget.twitter .twitter-profile-pic {
     height: auto;
@@ -1398,11 +1399,33 @@ hr.line.align-right {
 /**************************/
 /* Two Columns: 65 - 35 */
 /**********************/
+.columns-two-65-35
+{
+  width: 100%;
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.columns-two-65-35 .column
+{
+    display:block;
+    /*float:left;*/
+    min-height: 40px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.columns-two-65-35 .column.columns-two-right
+{
+  float:right;
 
+}
 .columns-two-65-35 .columns-two-left
 {
   width: 62%;
-    margin-right: 3%;
+    /*margin-right: 3%;*/
 }
 
 .columns-two-65-35 .columns-two-right
@@ -1420,6 +1443,7 @@ hr.line.align-right {
   .columns-two-65-35 .columns-two-right
   {
     width: 100%;
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 479px) 
@@ -1434,3 +1458,6 @@ hr.line.align-right {
     width: 100%;
   }
 }
+
+
+

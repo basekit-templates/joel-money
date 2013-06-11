@@ -9,18 +9,22 @@
        <div class="header-main-right">
             <ul>
                 <li>
-                    <div class="widget content">
+                    <!-- <div class="widget content">
                         <div class="bk-content-text">
                             <h2>Make a donation today!</h2>
                         </div>
-                    </div>
+                    </div> -->
+
+                    {{widget('content', 'content2', {content: '<h2>Make a donation today!</h2>', lines: 'all' })|raw}}
                 </li>
                 <li>
-                    <div class="widget button">   
+                    <!-- <div class="widget button">   
                         <button class="btn">
                             <span class="btnText">DONATE</span>
                         </button>
-                    </div>
+                    </div> -->
+
+                    {{widget('button', 'button', {italic: false, text:'DONATE'})|raw}}
                 </li>
             </ul>
         </div>
@@ -43,19 +47,25 @@
             </div>
             <div class="column columns-two-right">
                 <div class="content-bg intro">
-                    <div class="widget content">
+                   <!--  <div class="widget content">
                         <div class="bk-content-text">
                             <h2>We say<br>what we do, <br>do what we say</h2>
                             <p>Donec ut mauris faucibus justo egestas sagittis no non ligula. Sed aliquet velit arcu nullam sed turpis nam. <a href="#">Pretium Views »</a></p>
                             <p>Lorem <b>ipsum dolor</b> sit amet, consectetur.</p>
                         </div>
-                    </div>
-                    <div class="widget line">
-                        <hr class="line"></hr>
-                    </div>
-                    <div class="widget tweet">
+                    </div> -->
+
+                    {{widget('content', 'content1', {content: '<h2>We say<br>what we do, <br>do what we say</h2>
+                            <p>Donec ut mauris faucibus justo egestas sagittis no non ligula. Sed aliquet velit arcu nullam sed turpis nam. <a href="#">Pretium Views »</a></p>
+                            <p>Lorem <b>ipsum dolor</b> sit amet, consectetur.</p>', lines: 'all' })|raw}}
+                    
+                    {{widget('line', 'line', {'thickness': 'inherit', 'padding': '15', 'length':'100', 'align': 'left'})|raw}}
+                    
+                    <!-- <div class="widget tweet">
                         <a href="#" class="tweet-link">TWEET</a>
-                    </div>
+                    </div> -->
+
+                    {{widget('tweet', 'tweet', {'linkText': 'TWEET'})|raw}}
                 </div>
             </div>
         </div>
@@ -63,17 +73,13 @@
 
     <!-- MAIN ZONE !-->
     <section class="main-zone">
-        <div class="content-bg">
-            <div class="widget responsivecolumns columns-two-65-35">
-                <div class="column columns-two-left">
+        <div class="content-bg ">
+            <div class="columns-two-65-35 clearfix">
+                <div class="column  columns-two-left main" style="float:left">
                     {{zone('main')|raw}}
                 </div>
                 <div class="column columns-two-right">
-                    <div class="widget content">
-                        <div class="bk-content-text">
-                            <h4>Twitter Feed</h4>
-                        </div>
-                    </div>
+                    {{widget('content', 'content', {content: '<h4>Twitter Feed</h4>', lines: 'all' })|raw}}
                     {{widget('twitter', 'twitter', {'searchKey': 'basekit', 'searchType': 'username', 'count': '3','refreshTime': '1800000','includeRts': '0'})|raw}}
                 </div>
             </div>
