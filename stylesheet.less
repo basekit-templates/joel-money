@@ -21,6 +21,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -1206,6 +1207,15 @@ hr.line.align-right {
 
 @media only screen and (max-width: 480px) {
 
+  .wrapper {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  section.main {
+    padding: 10px;
+  }
+
   header h1 {
     font-size: 24px;
   }
@@ -1238,6 +1248,10 @@ hr.line.align-right {
     border-bottom: 1px solid darken(@color-swatch2,6%);
   }
 
+  .widget .extendednavigation li:hover {
+    background-color: darken(@color-swatch2,3%);
+  }
+
   .widget.extendednavigation ul li.folder {
     padding: 0;
   }
@@ -1252,12 +1266,11 @@ hr.line.align-right {
     padding: 2.3em 1em;
   }
 
-  .widget .extendednavigation ul li:first-child, .widget .extendednavigation ul li:last-child {
+  .widget .extendednavigation ul li:last-child {
     border: 0;
   }
 
   .widget.extendednavigation li:hover > ul {
-    border-top: 1px solid @color-swatch3;
     width: 100%;
     margin-left: 0;
   }
@@ -1265,6 +1278,10 @@ hr.line.align-right {
   .widget.extendednavigation li:hover > ul li {
     display: block!important;
     margin-bottom: 0;
+  }
+
+  .widget.extendednavigation ul li:hover > ul li:first-child {
+    padding-top: 0;
   }
   
   /* UL ALIGN RIGHT */
@@ -1360,6 +1377,10 @@ hr.line.align-right {
     text-decoration: none;
   }
 
+  footer section.footer2 {
+    padding: 2em 0 .8em;
+  }
+
   /* CUSTOM */
 
   .header-main-right {
@@ -1371,8 +1392,16 @@ hr.line.align-right {
     background-color: transparent;
   }
 
+  section.main-zone {
+    margin: 10px 0 0;
+  }
+
   .widget.twitter .twitter-profile-pic {
     height: 100px;
+  }
+
+  .footer2 .responsivecolumns .columns-two-left, .columns-two-50-50 .columns-two-left {
+    margin-bottom: 0;
   }
 
 }
