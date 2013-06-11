@@ -129,9 +129,6 @@ section.main-zone {
   margin: 20px 0 0;
 }
 
-/* RESPONSIVE COLUMNS - 35-65 */
-
-
 
 /* HEADER MAIN */
 
@@ -202,7 +199,7 @@ header .widget.button button {
 
 header {
   padding: 0;
-  background-color: @color-swatch7;
+  background-color: lighten(@color-swatch2,3%);
   background-image: image('/images/header-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
@@ -260,12 +257,16 @@ footer {
   color: @color-swatch1;
 }
 
-footer h4 {
+footer h3 {
   color: @color-swatch1;
   margin-bottom: 30px;
 }
 
 footer p {
+  color: @color-swatch1;
+}
+
+footer a {
   color: @color-swatch1;
 }
 
@@ -1118,6 +1119,11 @@ hr.line.align-right {
 
 @media only screen and (max-width: 768px) {
 
+  header h1 {
+    font-size: 26px;
+    margin-top: 6px;
+  }
+
   /* NAV */
 
   .widget.extendednavigation {
@@ -1198,6 +1204,10 @@ hr.line.align-right {
    =============================== */
 
 @media only screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 24px;
+  }
 
   .widget.companyheader {
     width: 100%;
