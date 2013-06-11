@@ -115,16 +115,10 @@ section.main {
   box-shadow: 0 3px 10px rgba(110,110,110,0.1);
 }
 
-
-
 section.main .content-bg {
   background-color: lighten(@color-swatch2,70%);
   padding: 30px;
 }
-
-/*section.main section.feature-row, section.main section.feature-row .content-bg {
-  max-height: 357px;
-}*/
 
 section.main-zone {
   margin: 20px 0 0;
@@ -134,9 +128,6 @@ section.main-zone {
 /* HEADER MAIN */
 
 header h1 {
-  /*display: inline-block;
-  border-bottom: 2px solid #7eb4d9;
-  line-height: 22px;*/
   color: @color-swatch1;
   text-shadow: 0 -2px 0 hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 1); 
   letter-spacing: 2px;
@@ -186,12 +177,6 @@ header .widget.button button {
   background-color: @color-swatch2;
 }
 
-/* INTRO */
-
-.content-bg.intro .widget.line {
-  padding: 7px 0;
-}
-
 
 
 /* ===============================
@@ -200,7 +185,7 @@ header .widget.button button {
 
 header {
   padding: 0;
-  background-color: lighten(@color-swatch2,3%);
+  background-color: @color-swatch7;
   background-image: image('/images/header-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
@@ -260,7 +245,7 @@ footer {
 
 footer h3 {
   color: @color-swatch1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 footer p {
@@ -415,7 +400,6 @@ header .widget.extendednavigation {
 .widget.extendednavigation ul li:hover > ul li {
   display: block;
   width: 100%;
-  text-align: left;
 }
 
 .widget.extendednavigation ul li:hover > ul li:hover {
@@ -858,9 +842,6 @@ hr.line.align-right {
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     text-indent: 8px;
     margin-top: 6px;
     margin-bottom: 30px;
@@ -869,13 +850,10 @@ hr.line.align-right {
 .widget.contactform fieldset textarea {
     height: 100px;
     width: 100%;
-    border: 1px solid lighten(@color-swatch5,10%);
+    border: 1px solid lighten(@color-swatch5,13%);
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     text-indent: 8px;
     padding-top: 14px;
     margin-top: 6px;
@@ -888,9 +866,6 @@ hr.line.align-right {
     padding: 6px 8px;
     margin: 0;
     border: none;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
     box-shadow: 0 4px darken(@color-swatch3,15%);
 
     font-family: @font-swatch2-font-family;
@@ -1015,9 +990,8 @@ hr.line.align-right {
 .widget.gallery ul.gallery-widget
 {
     display:block;
-    background-color: @color-swatch2;
-    margin: 0;
-    padding: 20px 20px 0;
+    margin: 20px 0;
+    padding: 0;
     list-style: none;
     min-height: 100px;
     color: #555555;
@@ -1028,9 +1002,8 @@ hr.line.align-right {
     display: inline-block;
     background-color: @color-swatch1;
     padding: 2%;
-    text-align: center;
     overflow: hidden;
-    background-position:-9999px;
+    background-position: -9999px;
     background-repeat: no-repeat;
     margin-bottom: 20px;
     width: 45%; 
@@ -1050,7 +1023,6 @@ hr.line.align-right {
 .widget.gallery ul.gallery-widget li span.title, ul.gallery-widget li span.description
 {
     width: 100%;
-    text-align: center;
 }
 .widget.gallery ul.gallery-widget li span.title.visible, ul.gallery-widget li span.description.visible
 {
@@ -1120,6 +1092,11 @@ hr.line.align-right {
 
 @media only screen and (max-width: 768px) {
 
+  .wrapper {
+    width: 88%;
+    margin: 0 auto;
+  }
+
   header h1 {
     font-size: 26px;
     margin-top: 6px;
@@ -1185,6 +1162,10 @@ hr.line.align-right {
     margin-bottom: 0;
   } 
 
+  footer section.footer2 {
+    padding: 2em 0 .8em;
+  }
+
   /*
   .columns-two-right .widget.content {
     border-top: 2px solid lighten(@color-swatch2,68%);
@@ -1214,6 +1195,10 @@ hr.line.align-right {
 
   section.main {
     padding: 10px;
+  }
+
+  section.main .content-bg {
+    padding: 20px;
   }
 
   header h1 {
@@ -1273,6 +1258,7 @@ hr.line.align-right {
   .widget.extendednavigation li:hover > ul {
     width: 100%;
     margin-left: 0;
+    border-top: 1px solid @color-swatch3;
   }
 
   .widget.extendednavigation li:hover > ul li {
@@ -1318,10 +1304,6 @@ hr.line.align-right {
     line-height: 36px;
   }
 
-  .widget.feature h3 {
-    display: none;
-  }
-
   .widget.feature button {
     margin: 1em auto 2.4em;
     font-size: 12px;
@@ -1352,9 +1334,6 @@ hr.line.align-right {
     background-position: 10px;
     padding: 10px 8px 10px 36px;
     border: none;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
     box-shadow: 0 4px darken(@color-swatch3,15%);
 
     font-family: @font-swatch7-font-family;
@@ -1397,7 +1376,13 @@ hr.line.align-right {
   }
 
   .widget.twitter .twitter-profile-pic {
-    height: 100px;
+    height: 120px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 3em 0 0;
   }
 
   .footer2 .responsivecolumns .columns-two-left, .columns-two-50-50 .columns-two-left {
