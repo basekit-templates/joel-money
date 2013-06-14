@@ -6,7 +6,7 @@
 
 body {
   background-color: @color-swatch1;
-  background-image: url('../images/wavecut.png');
+  background-image: image('/images/wavecut.png');
   background-repeat: repeat;
   margin: 0;
   padding: 0;
@@ -191,7 +191,7 @@ header .widget.button button {
 header {
   padding: 0;
   background-color: @color-swatch7;
-  background-image: url('../images/header-bg.png');
+  background-image: image('/images/header-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -378,7 +378,7 @@ header .widget.extendednavigation {
 
 .widget.extendednavigation ul li.folder {
   display: block;
-  background-image: url('../images/arrow-down.png');
+  background-image: image('/images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
@@ -436,7 +436,7 @@ header .widget.extendednavigation {
 .widget.feature .content {
   padding: 5.5em 0 2em;
   margin: 0 auto;
-  position: absolute!important;
+  position: absolute;
   top: 0;
 }
 
@@ -482,7 +482,7 @@ header .widget.extendednavigation {
   margin: 0;
   border: none;
   box-shadow: 0 4px darken(@color-swatch3,15%);
-  background-image: url('../images/button-arrow.png');
+  background-image: image('/images/button-arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
 
@@ -634,7 +634,7 @@ header .widget.extendednavigation {
   margin: 0;
   border: none;
   box-shadow: 0 4px darken(@color-swatch3,15%);
-  background-image: url('../images/button-arrow.png');
+  background-image: image('/images/button-arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
 
@@ -922,7 +922,7 @@ hr.line.align-right {
 .widget.redirecttodesktop a {
     padding-right: 30px;
     padding-top: 2px;
-    background-image: url('../images/desktop.png');
+    background-image: image('/images/desktop.png');
     background-repeat: no-repeat;
     background-position: right center;
     font-size: 12px;
@@ -933,7 +933,7 @@ hr.line.align-right {
 }
 
 .widget.redirecttodesktop a:hover, .desktop a:active {
-    background-image: url('../images/desktop.png');
+    background-image: image('/images/desktop.png');
     background-repeat: no-repeat;
     background-position: right center;
     cursor: pointer;
@@ -953,7 +953,7 @@ hr.line.align-right {
   margin: 0;
   border: none;
   box-shadow: 0 4px #02aad7;
-  background-image: url('../images/twitter.png');
+  background-image: image('/images/twitter.png');
   background-repeat: no-repeat;
   background-position: 10px 8px;
 
@@ -969,7 +969,7 @@ hr.line.align-right {
 
 .widget.tweet a:hover, .tweet a:active {
   background-color: #00b4e3;
-  background-image: url('../images/twitter.png');
+  background-image: image('/images/twitter.png');
   background-repeat: no-repeat;
   background-position: 10px 8px;
   cursor: pointer;
@@ -990,9 +990,8 @@ hr.line.align-right {
 .widget.gallery ul.gallery-widget
 {
     display:block;
-    background-color: @color-swatch2;
     margin: 0;
-    padding: 20px 20px 0;
+    padding: 0;
     list-style: none;
     min-height: 100px;
     color: #555555;
@@ -1064,27 +1063,27 @@ hr.line.align-right {
     background-repeat: no-repeat;
 }
 .widget.socialicons span.bk-socialicons-twitter a {
-    background-image: url('../hatch/images/socialicons-twitter.png')
+    background-image: image('/hatch/images/socialicons-twitter.png')
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: url('../hatch/images/socialicons-linkedin.png');
+    background-image: image('/hatch/images/socialicons-linkedin.png');
 }
 
 .widget.socialicons span.bk-socialicons-facebook a {
-    background-image: url('../hatch/images/socialicons-facebook.png');
+    background-image: image('/hatch/images/socialicons-facebook.png');
 }
 
 .widget.socialicons span.bk-socialicons-rss a {
-    background-image: url('../hatch/images/socialicons-rssfeed.png');
+    background-image: image('/hatch/images/socialicons-rssfeed.png');
 }
 
 .widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: url('../hatch/images/socialicons-googleplus.png');
+    background-image: image('/hatch/images/socialicons-googleplus.png');
 }
 
 .widget.socialicons span.bk-socialicons-youtube a {
-    background-image: url('../hatch/images/socialicons-youtube.png');
+    background-image: image('/hatch/images/socialicons-youtube.png');
 }
 
 
@@ -1152,7 +1151,7 @@ hr.line.align-right {
   }
 
   .widget.feature .bgimage {
-    height: auto;
+
   }
 
   /* OTHER */
@@ -1309,7 +1308,7 @@ hr.line.align-right {
   }
 
   .widget.clicktocall a {
-    background-image: url('../images/ic-desktop-call-mob.png');
+    background-image: image('/images/ic-desktop-call-mob.png');
     background-color: @color-swatch3;
     background-position: 10px;
     padding: 10px 8px 10px 36px;
@@ -1327,7 +1326,7 @@ hr.line.align-right {
   }
 
   .widget.clicktocall a:hover {
-    background-image: url('../images/ic-desktop-call-mob.png');
+    background-image: image('/images/ic-desktop-call-mob.png');
     background-color: darken(@color-swatch3,2%);
     background-position: 10px;
     color: @color-swatch1;
@@ -1343,7 +1342,7 @@ hr.line.align-right {
   /* CUSTOM */
 
   .widget.feature .bgimage {
-    height: auto;
+    height: 185px;
   }
 
   .widget.feature .content {
@@ -1468,14 +1467,3 @@ hr.line.align-right {
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
