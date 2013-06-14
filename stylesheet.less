@@ -122,7 +122,7 @@ section.main {
 }
 
 section.main .content-bg {
-  background-color: #f4f8f9;
+  background-color: lighten(@color-swatch2,72%);
   padding: 30px;
 }
 
@@ -134,7 +134,7 @@ section.main-zone {
 /* HEADER MAIN */
 
 .widget.companyheader .company-name h1 {
-  color: @font-swatch1-color;
+  color: @color-swatch6;
   text-shadow: 0 -2px 0 hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 1); 
   letter-spacing: 2px;
 }
@@ -1384,6 +1384,10 @@ hr.line.align-right {
     padding: 3em 0 0;
   }
 
+  footer .footer2 .columns-two-right {
+    text-align: left;
+  }
+
 }
 
 @media only screen and (min-width: 1140px) {
@@ -1434,12 +1438,13 @@ hr.line.align-right {
 .columns-two-65-35 .columns-two-left
 {
   width: 63%;
-    margin-right: 2%;
+  margin-right: 2%;
 }
 
 .columns-two-65-35 .columns-two-right
 {
   width: 35%;
+  margin-left: 0;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px)
