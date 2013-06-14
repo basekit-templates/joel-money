@@ -1,6 +1,12 @@
+/* SCALING FUNCTION */
+.scale-value ( @property, @value: 13, @scale : 1) {
+  @property:  (@value * @scale)px;
+}
+
+
 body {
   background-color: @color-swatch1;
-  background-image: image('/images/wavecut.png');
+  background-image: url('../images/wavecut.png');
   background-repeat: repeat;
   margin: 0;
   padding: 0;
@@ -12,7 +18,7 @@ body {
 }
 
 a {
-  font-family:@font-swatch2-font-family;
+  font-family:@font-swatch3-font-family;
   font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
   color:@color-swatch3;
@@ -116,7 +122,7 @@ section.main {
 }
 
 section.main .content-bg {
-  background-color: lighten(@color-swatch2,70%);
+  background-color: #f4f8f9;
   padding: 30px;
 }
 
@@ -127,11 +133,10 @@ section.main-zone {
 
 /* HEADER MAIN */
 
-header h1 {
-  color: @color-swatch1;
+.widget.companyheader .company-name h1 {
+  color: @font-swatch1-color;
   text-shadow: 0 -2px 0 hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 1); 
   letter-spacing: 2px;
-  margin-bottom: 3px;
 }
 
 header h2 {
@@ -186,7 +191,7 @@ header .widget.button button {
 header {
   padding: 0;
   background-color: @color-swatch7;
-  background-image: image('/images/header-bg.png');
+  background-image: url('../images/header-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -250,6 +255,7 @@ footer h3 {
 
 footer p {
   color: @color-swatch1;
+  padding-bottom: 0;
 }
 
 footer a {
@@ -258,10 +264,6 @@ footer a {
 
 footer section.footer2 {
   padding: 5em 0 .8em;
-}
-
-footer section.footer2 p {
-  color: darken(@color-swatch3,20%);
 }
 
 
@@ -376,7 +378,7 @@ header .widget.extendednavigation {
 
 .widget.extendednavigation ul li.folder {
   display: block;
-  background-image: image('/images/arrow-down.png');
+  background-image: url('../images/arrow-down.png');
   background-position: right center;
   background-repeat: no-repeat;
   height: 100%;
@@ -424,32 +426,52 @@ header .widget.extendednavigation {
    =============================== */
 
 .widget.feature {
-  height: 357px!important;
+  height: auto;
+}
+
+.widget.feature .bgimage {
+  height: 357px;
 }
 
 .widget.feature .content {
-  padding: 5.5em 0 0;
+  padding: 5.5em 0 2em;
   margin: 0 auto;
-  width: 90%;
-  max-width: 960px;
+  position: absolute!important;
+  top: 0;
 }
+
+.widget.feature .content .spare {
+  max-width: 550px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* FEATURE TITLE */
 
 .widget.feature h2 {
-  color: @color-swatch1;
-  font-size: 36px;
-  line-height: 68px;
-  font-weight: 100;
+  font-family:@font-swatch8-font-family;
+  font-size:(@font-swatch8-font-size * 0.65); /* 40px */
+  font-weight: @font-swatch8-font-weight;
+  color: @font-swatch8-color;
+  letter-spacing: @font-swatch8-letter-spacing;
   text-align: center;
-  padding-bottom: 10px;
+
 }
+
+/* FEATURE STRAPLINE */
 
 .widget.feature h3 {
-  font-weight: 200;
-  border-bottom: 0;
-  font-size: 1.1em;
+  font-family:@font-swatch9-font-family;
+  font-size:(@font-swatch9-font-size * 0.65); /* 40px */
+  font-weight: @font-swatch9-font-weight;
+  line-height:@font-swatch9-line-height;
+  color: @font-swatch9-color;
+  letter-spacing: @font-swatch9-letter-spacing;
   text-align: center;
+  padding-bottom: 0;
 }
 
+/* FEATURE BUTTON */
 
 .widget.feature button
 {
@@ -460,7 +482,7 @@ header .widget.extendednavigation {
   margin: 0;
   border: none;
   box-shadow: 0 4px darken(@color-swatch3,15%);
-  background-image: image('/images/button-arrow.png');
+  background-image: url('../images/button-arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
 
@@ -507,10 +529,10 @@ header .widget.extendednavigation {
 }
 
 /* ===============================
-   SLIDESHOW
+   SLIDESHOW WIDGET
    =============================== */
 
-   .slideshow-widget .btn-prev, .slideshow-widget .btn-next
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next
 {
   display: none;
   position: absolute;
@@ -521,28 +543,28 @@ header .widget.extendednavigation {
   text-indent: -99999px;  
 }
 
-.slideshow-widget .btn-prev
+.widget.responsiveslideshow .slideshow-widget .btn-prev
 {
   left: 10px;
   background: image('/images/slideshow-arrow-left.png') no-repeat center left;
   background-size: contain;
 }
 
-.slideshow-widget .btn-next
+.widget.responsiveslideshow .slideshow-widget .btn-next
 {
   right: 10px;
   background: image('/images/slideshow-arrow-right.png') no-repeat center right; 
     background-size: contain;   
 }
 
-.slideshow-widget:hover .btn-prev, .slideshow-widget:hover .btn-next
+.widget.responsiveslideshow .slideshow-widget:hover .btn-prev, .widget.responsiveslideshow .slideshow-widget:hover .btn-next
 {
   top: 43%;
   display: block;
   cursor: pointer;
 }
 
-.slideshow-widget-controls
+.widget.responsiveslideshow .slideshow-widget-controls
 {
   margin-top: 10px;
   text-align: center;
@@ -552,7 +574,7 @@ header .widget.extendednavigation {
     padding: 10px;
 }
 
-.slideshow-widget .btn-play
+.widget.responsiveslideshow .slideshow-widget .btn-play
 {
   display: none;
   position: absolute;
@@ -566,18 +588,18 @@ header .widget.extendednavigation {
   left: 43%;
 }
 
-.slideshow-widget:hover .btn-play
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play
 {
   display:block;
 }
 
-.slideshow-widget:hover .btn-play.pause
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
   background: image('/images/slideshow-pause.png') center no-repeat;
   background-size: 100%;  
 }
 
-.slideshow-widget-controls .dot
+.widget.responsiveslideshow .slideshow-widget-controls .dot
 {
   width: 14px;
   height: 14px;
@@ -586,12 +608,12 @@ header .widget.extendednavigation {
   background: image('/images/slideshow-dot-not-selected.png') center no-repeat;
 }
 
-.slideshow-widget-controls .dot.selected
+.widget.responsiveslideshow .slideshow-widget-controls .dot.selected
 {
   background: image('/images/slideshow-dot-selected.png') center no-repeat;
 }
 
-.slideshow-widget .btn-prev.disabled, .slideshow-widget .btn-next.disabled, .slideshow-widget .btn-play.disabled
+.widget.responsiveslideshow .slideshow-widget .btn-prev.disabled, .widget.responsiveslideshow .slideshow-widget .btn-next.disabled, .widget.responsiveslideshow .slideshow-widget .btn-play.disabled
 {
   opacity:0.4;
   cursor: default;
@@ -612,7 +634,7 @@ header .widget.extendednavigation {
   margin: 0;
   border: none;
   box-shadow: 0 4px darken(@color-swatch3,15%);
-  background-image: image('/images/button-arrow.png');
+  background-image: url('../images/button-arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
 
@@ -698,34 +720,12 @@ hr.line.align-right {
 }
 
 /* ===============================
-   CLICK TO CALL
+   CLICK TO CALL - DOESN'T SHOW IN DESKTOP
    =============================== */
 
-.widget.clicktocall {
-    padding: 10px 0;
-}
-
-.widget.clicktocall a {
-  margin: 0;
-  background-image: image('/images/ic-desktop-call.png');
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 28px;
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch4-font-weight;
-  line-height: @font-swatch4-line-height;
-  color:@font-swatch4-color;
-}
-
-.widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-hov.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 28px;
-    cursor: pointer;
-    text-decoration: none;
-}
+  .widget.clicktocall {
+     display:none;
+   }
 
 .widget.clicktocall a.justifyleft
 {
@@ -922,7 +922,7 @@ hr.line.align-right {
 .widget.redirecttodesktop a {
     padding-right: 30px;
     padding-top: 2px;
-    background-image: image('/images/desktop.png');
+    background-image: url('../images/desktop.png');
     background-repeat: no-repeat;
     background-position: right center;
     font-size: 12px;
@@ -933,7 +933,7 @@ hr.line.align-right {
 }
 
 .widget.redirecttodesktop a:hover, .desktop a:active {
-    background-image: image('/images/desktop.png');
+    background-image: url('../images/desktop.png');
     background-repeat: no-repeat;
     background-position: right center;
     cursor: pointer;
@@ -953,7 +953,7 @@ hr.line.align-right {
   margin: 0;
   border: none;
   box-shadow: 0 4px #02aad7;
-  background-image: image('/images/twitter.png');
+  background-image: url('../images/twitter.png');
   background-repeat: no-repeat;
   background-position: 10px 8px;
 
@@ -969,14 +969,14 @@ hr.line.align-right {
 
 .widget.tweet a:hover, .tweet a:active {
   background-color: #00b4e3;
-  background-image: image('/images/twitter.png');
+  background-image: url('../images/twitter.png');
   background-repeat: no-repeat;
   background-position: 10px 8px;
   cursor: pointer;
 }
 
 /* ===============================
-   GALLERY
+   GALLERY WIDGET
    =============================== */
 
 .widget.gallery
@@ -990,8 +990,9 @@ hr.line.align-right {
 .widget.gallery ul.gallery-widget
 {
     display:block;
-    margin: 20px 0;
-    padding: 0;
+    background-color: @color-swatch2;
+    margin: 0;
+    padding: 20px 20px 0;
     list-style: none;
     min-height: 100px;
     color: #555555;
@@ -1002,8 +1003,9 @@ hr.line.align-right {
     display: inline-block;
     background-color: @color-swatch1;
     padding: 2%;
+    text-align: center;
     overflow: hidden;
-    background-position: -9999px;
+    background-position:-9999px;
     background-repeat: no-repeat;
     margin-bottom: 20px;
     width: 45%; 
@@ -1023,6 +1025,7 @@ hr.line.align-right {
 .widget.gallery ul.gallery-widget li span.title, ul.gallery-widget li span.description
 {
     width: 100%;
+    text-align: center;
 }
 .widget.gallery ul.gallery-widget li span.title.visible, ul.gallery-widget li span.description.visible
 {
@@ -1061,27 +1064,27 @@ hr.line.align-right {
     background-repeat: no-repeat;
 }
 .widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/hatch/images/socialicons-twitter.png')
+    background-image: url('../hatch/images/socialicons-twitter.png')
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/hatch/images/socialicons-linkedin.png');
+    background-image: url('../hatch/images/socialicons-linkedin.png');
 }
 
 .widget.socialicons span.bk-socialicons-facebook a {
-    background-image: image('/hatch/images/socialicons-facebook.png');
+    background-image: url('../hatch/images/socialicons-facebook.png');
 }
 
 .widget.socialicons span.bk-socialicons-rss a {
-    background-image: image('/hatch/images/socialicons-rssfeed.png');
+    background-image: url('../hatch/images/socialicons-rssfeed.png');
 }
 
 .widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/hatch/images/socialicons-googleplus.png');
+    background-image: url('../hatch/images/socialicons-googleplus.png');
 }
 
 .widget.socialicons span.bk-socialicons-youtube a {
-    background-image: image('/hatch/images/socialicons-youtube.png');
+    background-image: url('../hatch/images/socialicons-youtube.png');
 }
 
 
@@ -1097,8 +1100,8 @@ hr.line.align-right {
     margin: 0 auto;
   }
 
-  header h1 {
-    font-size: 26px;
+  .widget.companyheader .company-name h1 {
+    font-size:(@font-swatch1-font-size * 0.8);
     margin-top: 6px;
   }
 
@@ -1145,7 +1148,11 @@ hr.line.align-right {
   /* FEATURE NEW */
 
   .widget.feature {
-    
+    height: auto; 
+  }
+
+  .widget.feature .bgimage {
+    height: auto;
   }
 
   /* OTHER */
@@ -1165,12 +1172,6 @@ hr.line.align-right {
   footer section.footer2 {
     padding: 2em 0 .8em;
   }
-
-  /*
-  .columns-two-right .widget.content {
-    border-top: 2px solid lighten(@color-swatch2,68%);
-    padding-top: 40px;
-  }*/
 
   .widget.twitter .twitter-profile-pic {
     height: auto;
@@ -1201,12 +1202,12 @@ hr.line.align-right {
     padding: 20px;
   }
 
-  header h1 {
-    font-size: 24px;
-  }
-
   .widget.companyheader {
     width: 100%;
+  }
+
+  .widget.companyheader .company-name h1 {
+    font-size:(@font-swatch1-font-size * 0.65);
   }
 
   /* NAV */
@@ -1289,27 +1290,6 @@ hr.line.align-right {
     text-align: left;
   }
 
-  /* FEATURE */
-
-  .widget.feature {
-    height: 250px!important;
-  }
-
-  .widget.feature .content {
-    padding-top: 2.4em;
-  }
-
-  .widget.feature h2 {
-    font-size: 19px;
-    line-height: 36px;
-  }
-
-  .widget.feature button {
-    margin: 1em auto 2.4em;
-    font-size: 12px;
-    padding: 8px;
-  }
-
   /* GALLERY */
 
   .widget.gallery p
@@ -1329,7 +1309,7 @@ hr.line.align-right {
   }
 
   .widget.clicktocall a {
-    background-image: image('/images/ic-desktop-call-mob.png');
+    background-image: url('../images/ic-desktop-call-mob.png');
     background-color: @color-swatch3;
     background-position: 10px;
     padding: 10px 8px 10px 36px;
@@ -1347,7 +1327,7 @@ hr.line.align-right {
   }
 
   .widget.clicktocall a:hover {
-    background-image: image('/images/ic-desktop-call-mob.png');
+    background-image: url('../images/ic-desktop-call-mob.png');
     background-color: darken(@color-swatch3,2%);
     background-position: 10px;
     color: @color-swatch1;
@@ -1361,6 +1341,26 @@ hr.line.align-right {
   }
 
   /* CUSTOM */
+
+  .widget.feature .bgimage {
+    height: auto;
+  }
+
+  .widget.feature .content {
+    padding: 3em 0 1em;
+  }
+
+  .widget.feature .content .spare {
+    max-width: 350px;
+  }
+
+  .widget.feature h2 {
+    font-size:(@font-swatch8-font-size * 0.4); /* 20px */
+  }
+
+  .widget.feature h3 {
+    font-size:(@font-swatch9-font-size * 0.55); /* 20px */
+  }
 
   .header-main-right {
     display: none;
@@ -1376,17 +1376,13 @@ hr.line.align-right {
   }
 
   .widget.twitter .twitter-profile-pic {
-    height: 120px;
+    height: 110px;
   }
 
   /* FOOTER */
 
   footer {
     padding: 3em 0 0;
-  }
-
-  .footer2 .responsivecolumns .columns-two-left, .columns-two-50-50 .columns-two-left {
-    margin-bottom: 0;
   }
 
 }
@@ -1438,8 +1434,8 @@ hr.line.align-right {
 }
 .columns-two-65-35 .columns-two-left
 {
-  width: 62%;
-    /*margin-right: 3%;*/
+  width: 63%;
+    margin-right: 2%;
 }
 
 .columns-two-65-35 .columns-two-right
@@ -1472,6 +1468,14 @@ hr.line.align-right {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
 
 
 
