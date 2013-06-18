@@ -9,21 +9,9 @@
        <div class="header-main-right">
             <ul>
                 <li>
-                    <!-- <div class="widget content">
-                        <div class="bk-content-text">
-                            <h2>Make a donation today!</h2>
-                        </div>
-                    </div> -->
-
                     {{widget('content', 'content2', {content: '<h2>Make a donation today!</h2>', lines: 'all' })|raw}}
                 </li>
                 <li>
-                    <!-- <div class="widget button">   
-                        <button class="btn">
-                            <span class="btnText">DONATE</span>
-                        </button>
-                    </div> -->
-
                     {{widget('button', 'button', {italic: false, text:'DONATE'})|raw}}
                 </li>
             </ul>
@@ -47,26 +35,15 @@
             </div>
             <div class="column columns-two-right">
                 <div class="content-bg intro">
-                   <!--  <div class="widget content">
-                        <div class="bk-content-text">
-                            <h2>We say<br>what we do, <br>do what we say</h2>
-                            <p>Donec ut mauris faucibus justo egestas sagittis no non ligula. Sed aliquet velit arcu nullam sed turpis nam. <a href="#">Pretium Views »</a></p>
-                            <p>Lorem <b>ipsum dolor</b> sit amet, consectetur.</p>
-                        </div>
-                    </div> -->
-
                     {{widget('content', 'content1', {content: '<h2>We say<br>what we do, <br>do what we say</h2>
                             <p>Donec ut mauris faucibus justo egestas sagittis no non ligula. Sed aliquet velit arcu nullam sed turpis nam. <a href="#">Pretium Views »</a></p>', lines: 'all' })|raw}}
                     
-                    <div class="widget line" style="padding: 3px 0;">
+                    <div class="widget line" style="padding: 20px 0;">
                         <hr class="line"></hr>
                     </div>
-                    
-                    <!-- <div class="widget tweet">
-                        <a href="#" class="tweet-link">TWEET</a>
-                    </div> -->
 
                     {{widget('tweet', 'tweet', {'linkText': 'TWEET'})|raw}}
+
                 </div>
             </div>
         </div>
