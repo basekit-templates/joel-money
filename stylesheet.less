@@ -1,8 +1,8 @@
 /* SCALING FUNCTION */
+
 .scale-value ( @property, @value: 13, @scale : 1) {
   @property:  (@value * @scale)px;
 }
-
 
 body {
   background-color: @color-swatch1;
@@ -248,7 +248,7 @@ footer {
   color: @color-swatch1;
 }
 
-footer h3 {
+footer h1, footer h2, footer h3, footer h4 {
   color: @color-swatch1;
   margin-bottom: 20px;
 }
@@ -262,7 +262,7 @@ footer a {
   color: @color-swatch1;
 }
 
-footer section.footer2 {
+footer .footer2 {
   padding: 5em 0 .8em;
 }
 
@@ -426,36 +426,50 @@ header .widget.extendednavigation {
    =============================== */
 
 .widget.feature {
-  height: auto;
+  display: block!important;
 }
 
-.widget.feature .bgimage {
-  height: 357px;
+.widget.feature .wrapper {
+  margin: 0;
 }
+
+.widget.feature .feature-bgimg {
+  height: 357px;
+  display: block!important;
+ }
 
 .widget.feature .content {
-  padding: 5.5em 0 2em;
-  margin: 0 auto;
-  position: absolute;
-  top: 0;
+  display: block!important;
+  height: 357px;
+  text-align: right;
+  padding-top: 5em;
 }
 
 .widget.feature .content .spare {
-  max-width: 550px;
-  display: block;
-  margin: 0 auto;
+  display: inline!important;
 }
 
 /* FEATURE TITLE */
 
+.widget.feature h2 span, .widget.feature h3 span {
+  display: inline-block;
+  background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(@color-swatch2), 0.7); 
+}
+
+.widget.feature h2 span {
+  padding: 10px 16px;
+}
+
+.widget.feature h3 span {
+  padding: 0px 12px;
+}
+
 .widget.feature h2 {
   font-family:@font-swatch8-font-family;
-  font-size:(@font-swatch8-font-size * 0.65); /* 40px */
+  font-size:(@font-swatch8-font-size * 0.45); /* 40px */
   font-weight: @font-swatch8-font-weight;
   color: @font-swatch8-color;
   letter-spacing: @font-swatch8-letter-spacing;
-  text-align: center;
-
 }
 
 /* FEATURE STRAPLINE */
@@ -467,21 +481,15 @@ header .widget.extendednavigation {
   line-height:@font-swatch9-line-height;
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
-  text-align: center;
-  padding-bottom: 0;
 }
 
 /* FEATURE BUTTON */
 
 .widget.feature button
 {
-  display: none;
-  /*
-  display: block;
   padding: 6px 20px 6px 8px;
   margin: 0;
   border: none;
-  box-shadow: 0 4px darken(@color-swatch3,15%);
   background-image: image('/images/button-arrow.png');
   background-repeat: no-repeat;
   background-position: right center;
@@ -493,7 +501,12 @@ header .widget.extendednavigation {
   color: @color-swatch1;
   text-decoration: none;
   letter-spacing: 1px;
-  text-shadow: 0 1px 0px rgba(0,0,0,0.2);*/
+  text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+}
+
+.widget.feature button:hover {
+  cursor: pointer;
+  background-color: darken(@color-swatch3,5%);
 }
 
 /* ===============================
@@ -1044,17 +1057,18 @@ hr.line.align-right {
    =============================== */
 
 .widget.socialicons {
-    padding: 10px 0;
-    text-align: center;
+    padding: 0px;
     font-size: 12px;
     font-family:@font-swatch7-font-family;
 }
 
 .widget.socialicons a {
+    background-color: darken(@color-swatch3,8%);
     text-decoration: none;
     text-indent: -9999px;
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 6px;
 }
 
 .widget.socialicons span a {
@@ -1063,27 +1077,27 @@ hr.line.align-right {
     background-repeat: no-repeat;
 }
 .widget.socialicons span.bk-socialicons-twitter a {
-    background-image: image('/hatch/images/socialicons-twitter.png')
+    background-image: image('/images/socialicons-twitter.png')
 }
 
 .widget.socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/hatch/images/socialicons-linkedin.png');
+    background-image: image('/images/socialicons-linkedin.png');
 }
 
 .widget.socialicons span.bk-socialicons-facebook a {
-    background-image: image('/hatch/images/socialicons-facebook.png');
+    background-image: image('/images/socialicons-facebook.png');
 }
 
 .widget.socialicons span.bk-socialicons-rss a {
-    background-image: image('/hatch/images/socialicons-rssfeed.png');
+    background-image: image('/images/socialicons-rssfeed.png');
 }
 
 .widget.socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/hatch/images/socialicons-googleplus.png');
+    background-image: image('/images/socialicons-googleplus.png');
 }
 
 .widget.socialicons span.bk-socialicons-youtube a {
-    background-image: image('/hatch/images/socialicons-youtube.png');
+    background-image: image('/images/socialicons-youtube.png');
 }
 
 
