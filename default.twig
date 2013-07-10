@@ -40,19 +40,7 @@
     <!-- MAIN ZONE !-->
     <section class="main-zone">
         <div class="content-bg">
-            <div class="widget responsivecolumns columns-two-65-35">
-                <div class="column columns-two-left">
-                    {{zone('main')|raw}}
-                </div>
-                <div class="column columns-two-right">
-                    <div class="widget content">
-                        <div class="bk-content-text">
-                            <h4>Twitter Feed</h4>
-                        </div>
-                    </div>
-                    {{widget('twitter', 'twitter', {'searchKey': 'basekit', 'searchType': 'username', 'count': '3','refreshTime': '1800000','includeRts': '0'})|raw}}
-                </div>
-            </div>
+             {{zone('main')|raw}}
         </div>
     </section>
 
