@@ -3,6 +3,8 @@
 	"thumbnail":"joel-money.png",
 	"screenshot":"joel-money.png",
 	"pageTypes":["about"],
+    "defaultColorSwatch":"Ocean 5",
+    "defaultFontSwatch":"Montserrat",
 	"colorSwatches":
     {
         "Swatch 1": {
