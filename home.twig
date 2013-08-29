@@ -3,98 +3,68 @@
 {% block content %}
 
  <header>
-
     <div class="header-main wrapper clearfix">
-       {{widget('companyheader', 'companyheader', {"defaultlogo": asset('images/logo.png')})|raw}}
+       <div class="companyheader clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </div>
        <div class="header-main-right">
             <ul>
                 <li>
-                    {{widget('content', 'content2', {content: '<h2>Make a donation today!</h2>', lines: 'all' })|raw}}
+                    {{widget('content', 'headercontent1', {content: '<h2>Make a donation today!</h2>', lines: 'all' })|raw}}
                 </li>
                 <li>
-                    {{widget('button', 'button', {italic: false, text:'DONATE'})|raw}}
+                    {{widget('button', 'button', {italic: false, text:'LOREMA'})|raw}}
                 </li>
             </ul>
         </div>
     </div>
-
-    <div class="header-sub">
+    <nav>
         <div class="wrapper clearfix">
             {{widget('extendednavigation', 'navigationheader', {})|raw}}
         </div>
-    </div>
-
+    </nav>
 </header>
 
-<!-- FEATURE ROW !-->
-<section class="main wrapper clearfix">
-    <section class="feature-row">
-        <div class="widget responsivecolumns columns-two-65-35">
-            <div class="column columns-two-left">
-                 {{widget('feature', 'featurehome', {"header": "End Budget Diversions in Austin", "strapline":"No Excuses. No Deceptions.", "buttonText":"MORE INFO","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-            </div>
-            <div class="column columns-two-right">
-                <div class="content-bg intro">
-                    {{widget('content', 'content1', {content: '<h2>We say<br>what we do, <br>do what we say</h2>
-                            <p>Donec ut mauris faucibus justo egestas sagittis no non ligula. Sed aliquet velit arcu nullam sed turpis nam. <a href="#">Pretium Views »</a></p>', lines: 'all' })|raw}}
-                    
-                    <div class="widget line" style="padding: 20px 0;">
-                        <hr class="line"></hr>
-                    </div>
+<div class="main wrapper clearfix">
+    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"LOREM IPSUM","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '100','showBtn': true})|raw}}
+</div>
+<div class="main wrapper clearfix">
+    <div class="content-bg">
+        {{zone('main')|raw}}
+    </div>
+</div>
 
-                    {{widget('tweet', 'tweet', {'linkText': 'TWEET'})|raw}}
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAIN ZONE !-->
-    <section class="main-zone">
-        <div class="content-bg ">
-            <div class="columns-two-65-35 clearfix">
-                <div class="column  columns-two-left main" style="float:left">
-                    {{zone('main')|raw}}
-                </div>
-                <div class="column columns-two-right">
-                    {{widget('content', 'content', {content: '<h4>Twitter Feed</h4>', lines: 'all' })|raw}}
-                    {{widget('twitter', 'twitter', {'searchKey': 'basekit', 'searchType': 'username', 'count': '3','refreshTime': '1800000','includeRts': '0'})|raw}}
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- FEATURE ROW END !-->
-</section>
-
-
+<!-- FOOTER !-->
 <footer>
-    <div class="wrapper clearfix">
-        <div class="widget responsivecolumns columns-three-33-34-33">
-           <div class="column columns-three-left">
-                {{widget('content', 'footercolumn1', {"content":"<h3>Lorem &amp; Ipsodium</h3><p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor nunc vellain livamus.</p><p><a>Lorem ipsum.</a></p>"})|raw}}
-           </div>
-           <div class="column columns-three-middle">
-                {{widget('content', 'footercolumn2', {"content":"<h3>Lorem &amp; Ipsodium</h3><p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor nunc vellain livamus.</p><p><a>Lorem ipsum.</a></p>"})|raw}}
-           </div>
-           <div class="column columns-three-right">
-                {{widget('content', 'footercolumn3', {"content":"<h3>Lorem &amp; Ipsodium</h3>"})|raw}}
-                {{widget('companyaddress', 'companyaddressfooter', {})|raw}}    
-           </div>
+    <div class="wrapper">
+        <div class="responsivecolumns columns-three-33-34-33">
+            <div class="column columns-three-left">
+                {{widget('content', 'footercolumn1content1', {"content":'<h4>LOREM IPSUM</h4>'})|raw}}
+
+                {% if profile.companydescription|length > 0 %}  
+                   {{widget('profile', 'footercolumn1profilecompanydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
+                {% else %}
+                    {{widget('content', 'footercolumn1content2', {"content":'<p>Integer a Tortor dui nullam nec antemi morbi sodales urna sit amet mauris.</p>'})|raw}}
+                {% endif %}
+
+            </div>
+            <div class="column columns-three-middle">
+                {{widget('content', 'footercolumn2content1', {"content":'<h4>THOATES ORA</h4>'})|raw}}
+                {{widget('profile', 'footercolumn2profileemail', { 'profileType':'phone', 'phone':'profile'})|raw}}
+                {{widget('profile', 'footercolumn2profilephone', { 'profileType':'email', 'email':'profile'})|raw}}
+            </div>
+            <div class="column columns-three-right">
+                {{widget('content', 'footercolumn3content1', {"content":'<h4>SOLADES</h4>'})|raw}}
+                {{widget('profile', 'footercolumn3profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
         </div>
     </div>
-    <section class="footer2">
-        <div class="wrapper clearfix">
-            <div class="widget responsivecolumns columns-two-50-50">
-                <div class="column columns-two-left">
-                    {{widget('content', 'footer2column1', {"content":"<p>Uvitae sagittis © 2013. Placerat ac Nulla.</p>"})|raw}}
-                </div>
-                <div class="column columns-two-right">
-                    {{widget('content', 'footer2column2', {"content":'<p style="text-align: right;">Lorem ipsum dolor sit amet consectetur.</p>'})|raw}}
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="footer2 wrapper">
+        {{widget('profile', 'footer2footercolumn1profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+    </div>
 </footer>
 
 {% endblock %}
+
+

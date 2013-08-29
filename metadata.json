@@ -2,9 +2,6 @@
 	"name":"Joel Money",
 	"thumbnail":"joel-money.png",
 	"screenshot":"joel-money.png",
-	"pageTypes":["about"],
-    "defaultColorSwatch":"Ocean 5",
-    "defaultFontSwatch":"Montserrat",
 	"colorSwatches":
     {
         "Swatch 1": {
@@ -99,12 +96,12 @@
             "font-family": "Montserrat",
             "font-size": "11px",
             "font-weight": "inherit",
-            "line-height": "18px",
+            "line-height": "20px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch6",
-            "letter-spacing": "inherit",
-            "background-color": "@color-swatch3",
-            "background-color-hover": "@color-swatch3"
+            "letter-spacing": "1px",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "darken(@color-swatch2,2%)"
         },
         "font7": {
             "font-family": "Montserrat",
@@ -112,9 +109,9 @@
             "font-weight": "inherit",
             "line-height": "24px",
             "color": "@color-swatch1",
-            "letter-spacing": "inherit",
+            "letter-spacing": "1px",
             "background-color": "@color-swatch3",
-            "background-color-hover": "@color-swatch3"
+            "background-color-hover": "lighten(@color-swatch3,3%)"
         },
         "font8": {
             "font-family": "Montserrat",
@@ -131,6 +128,14 @@
             "line-height": "40px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Montserrat",
+            "font-size": "30px",
+            "font-weight": "inherit",
+            "line-height": "36px",
+            "color": "@color-swatch6",
+            "letter-spacing": "2px"
         }
     }
 }
