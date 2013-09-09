@@ -2,6 +2,11 @@
 	"name":"Joel Money",
 	"thumbnail":"joel-money.png",
 	"screenshot":"joel-money.png",
+    "tags": {
+    "en": ["colorful", "bright", "political", "organisation", "modern", "colourful"],
+    "es": ["colorido", "claro", "electoral", "organizacion", "moderno", "colorido"],
+    "br": ["colorido", "claro", "politico", "instituição", "moderno", "colorido"]
+    },
 	"colorSwatches":
     {
         "Swatch 1": {
