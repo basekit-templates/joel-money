@@ -3,9 +3,9 @@
 	"thumbnail":"joel-money.png",
 	"screenshot":"joel-money.png",
     "tags": {
-    "en": ["colorful", "bright", "political", "organisation", "modern", "colourful"],
-    "es": ["colorido", "claro", "electoral", "organizacion", "moderno"],
-    "br": ["colorido", "claro", "politico", "instituição", "moderno"]
+    "en": ["colorful", "bright", "political", "organisation", "modern", "colourful", "professional", "corporate", "campaign", "democrat", "politician", "elegant", "candidate", "debate", "politics", "voters", "election", "social"],
+    "es": ["colorido", "claro", "electoral", "organizacion", "moderno", "profesional", "corporativo", "campaña", "democrativo", "político", "elegante", "candidato", "debate", "política", "votantes", "elecciones", "social"],
+    "br": ["colorido", "claro", "politico", "instituição", "moderno", "profissional", "corporativo", "campanha", "democrático", "político", "elegante", "candidato", "debate", "política", "eleitores", "eleição", "social"]
     },
 	"colorSwatches":
     {
