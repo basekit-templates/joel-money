@@ -1,4 +1,14 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE STYLES
+   =============================== */
 
 
 body {
@@ -533,10 +543,20 @@ header .widget.extendednavigation {
    PAYPAL BUTTON
    =============================== */
 
-
 .widget.paypalbuynow .widget.button.paypal {
   box-shadow: 0 4px darken(@color-swatch3,15%);
    text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   DROPBOX WIDGET
+   =============================== */
+   
+.widget.dropbox .b-wrap .btn {
+  box-shadow: 0 4px darken(@color-swatch3,15%);
+  text-shadow: 0 1px 0px rgba(0,0,0,0.2);
+  padding: 12px 22px 12px 45px;
+  text-transform: uppercase;
 }
 
 /* ===============================
