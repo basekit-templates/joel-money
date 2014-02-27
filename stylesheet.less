@@ -134,7 +134,7 @@ header {
     margin-right: 14px;
 }
 
-.companyheader {
+.infoheader {
     display: block;
     float: left;
     padding: 0;
@@ -262,8 +262,19 @@ header .widget.extendednavigation {
   margin: 0;
 }
 
-.widget.extendednavigation a.pull {
-  display: none;
+@media @tablet { 
+  .widget.extendednavigation a.pull {
+    top:-26px;
+    right:10px;
+
+  }
+}
+
+@media @mobile { 
+  .widget.extendednavigation a.pull {
+    top:-108px;
+    right:10px;
+  }
 }
 
 .widget.extendednavigation ul.align-center li
@@ -360,6 +371,7 @@ header .widget.extendednavigation {
 
 .widget.feature .feature-bgimg {
   height: 450px;
+  min-height:initial;
  }
 
 .widget.feature .content {
@@ -1373,6 +1385,7 @@ footer .footer2 .widget.profile form {
    =============================== */
 .widget.responsiveslideshow .slideshow-image-list {
     height: 300px;
+    min-height:initial;
 }
 
 .widget.responsiveslideshow .slideshow-widget {
@@ -1501,30 +1514,6 @@ footer .footer2 .widget.profile form {
     width: 100%;
   }
 
- /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 22px;
-  }
-
-    .widget .extendednavigation a.pull:after {
-    content:"";
-    background: image('/images/nav-icon.png') no-repeat;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: -50px;
-  }
-
-  .main .widget .extendednavigation a.pull {
-    display: none;
-  }
-
   #page-zones__template-widgets__extendednavigation-navigationheader {
     overflow: visible;
   }
@@ -1646,6 +1635,7 @@ footer .footer2 .widget.profile form {
     .widget.responsiveslideshow .slideshow-image-list, 
     .widget.responsiveslideshow .slideshow-widget {
         height:350px;
+        min-height:initial;
     }
 
 }
@@ -1671,10 +1661,6 @@ footer .footer2 .widget.profile form {
 
   section.main .content-bg {
     padding: 20px;
-  }
-
-  .widget.companyheader {
-    width: 100%;
   }
 
   /* GALLERY */
