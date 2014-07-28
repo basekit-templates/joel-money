@@ -67,6 +67,9 @@ blockquote:after {
   padding: 20px;
   background-color: @color-swatch1;
   box-shadow: 0 3px 10px rgba(110,110,110,0.1);
+  @media @mobile {
+    padding: 20px 0;
+  }
 }
 
 .main .content-bg {
@@ -95,8 +98,12 @@ blockquote:after {
   padding: 5px 0 0;
 }
 
+.header-main .header-main-right .widget.button {
+  margin: 0;
+}
+
 .header-main .header-main-right .widget.button button {
-  margin-left: 20px;
+  margin: 0 0 0 20px;
 }
 
 .header-main .header-main-right ul {
@@ -129,24 +136,30 @@ header {
 /* LOGO */
 
 .widget.logo {
-    display: block;
+    display: inline-block;
     margin-right: 14px;
-    float:left;
+    vertical-align: middle;
+    .logo, img {
+      line-height: 0;
+    }
 }
 
 .infoheader {
     display: block;
     padding: 0;
     z-index:2;
-    float:left;
+    float: left;
+    @media @tablet {
+      padding: 0 16px;
+    }
 }
 
 /* COMPANY NAME */
 
 .widget.companyname {
-    display: block;
-    float: left;
-    margin-top: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
 }
 
 .widget.companyname a {
@@ -257,6 +270,9 @@ header .widget.extendednavigation {
   position: relative;
   z-index:1;
   width: 100%;
+  @media @tablet {
+    min-height: 40px;
+  }
 }
 
 .widget.extendednavigation ul {
@@ -266,18 +282,18 @@ header .widget.extendednavigation {
 
 @media @tablet { 
   .widget.extendednavigation a.pull {
-    top:-26px;
-    right:10px;
-
-  }
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+      &:after {
+        top: 11px;
+        right: 11px;
+      }
+    }
 }
 
-@media @mobile { 
-  .widget.extendednavigation a.pull {
-    top:-108px;
-    right:10px;
-  }
-}
 
 .widget.extendednavigation ul.align-center li
 {
@@ -298,11 +314,14 @@ header .widget.extendednavigation {
   float: left;
   display: block;
   padding: 0;
+  &.selected {
+    background: darken(@font-swatch6-background-color-hover, 2%);
+  }
 }
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
-  padding: 14px 27px 14px 20px;
+  padding: 14px 20px;
   font-family: @font-swatch6-font-family;
   font-size: @font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
@@ -1503,9 +1522,6 @@ footer .footer2 .widget.profile form {
 
   /* NAV */
 
-  header nav {
-    padding-top: 36px;
-  }
 
   .widget.extendednavigation {
     width: 100%;
@@ -1527,12 +1543,17 @@ footer .footer2 .widget.profile form {
         width: 100%;
         display: none;
         padding: 0px; 
+        margin-top: 40px;
+        li {
+            border-bottom: none;
+            border-top: 1px solid darken(@color-swatch7,16%);;
+        }
     }
 
     .widget .extendednavigation li {
         width: 100%;
         padding: 0px;
-        border-bottom: 1px solid darken(@color-swatch2,3%);
+      
     }
 
     .widget.extendednavigation ul li.folder {
