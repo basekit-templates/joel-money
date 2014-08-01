@@ -2,7 +2,7 @@
 
 {% block content %}
 
- <header>
+ <header class="bk-header">
     <div class="header-main wrapper clearfix">
        <div class="infoheader clearfix">
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
@@ -26,7 +26,7 @@
     </nav>
 </header>
 
-<div class="main wrapper clearfix">
+<div class="main-content wrapper clearfix">
     {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"LOREM IPSUM","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '100','showBtn': true})|raw}}
 </div>
 <div class="main wrapper clearfix">
@@ -36,7 +36,7 @@
 </div>
 
 <!-- FOOTER !-->
-<footer>
+<footer class="bk-footer">
     <div class="wrapper">
         <div class="responsivecolumns columns-three-33-34-33">
             <div class="column columns-three-left">
