@@ -14,8 +14,6 @@ body {
   background-color: @color-swatch1;
   background-image: image('/images/wavecut.png');
   background-repeat: repeat;
-  margin: 0;
-  padding: 0;
 }
 
 .wrapper {
@@ -23,9 +21,8 @@ body {
     margin: 0 5%;
 }
 
-
-
-blockquote {
+.widget.content {
+  blockquote {
     margin: 7px 0;
     padding: 0 30px;
     quotes: "\201C""\201D""\2018""\2019";
@@ -34,9 +31,9 @@ blockquote {
     font-weight: @font-swatch5-font-weight;
     line-height: @font-swatch5-line-height;
     color: @font-swatch5-color;
-}
+  }
 
-blockquote:before {
+  blockquote:before {
     font-family: georgia;
     color: @font-swatch5-color;
     content: open-quote;
@@ -45,9 +42,9 @@ blockquote:before {
     line-height: .1em;
     margin-right: 10px;
     vertical-align: -.4em;
-}
+  }
 
-blockquote:after {
+  blockquote:after {
     font-family: georgia;
     color: @font-swatch5-color;
     content: close-quote;
@@ -55,8 +52,8 @@ blockquote:after {
     line-height: .1em;
     margin-left: 10px;
     vertical-align: -.4em;
+  }
 }
-
 
 
 /* ===============================
@@ -69,6 +66,9 @@ blockquote:after {
   box-shadow: 0 3px 10px rgba(110,110,110,0.1);
   @media @mobile {
     padding: 20px 0;
+  }
+  .widget {
+    clear: both;
   }
 }
 
@@ -212,56 +212,6 @@ footer .footer2 {
 
 
 /* ===============================
-   STANDARD NAVIGATION
-   =============================== */
-
-.widget.navigation {
-}
-
-.widget.navigation ul {
-  float: left;
-  padding: 0;
-  margin: 20px 0 0;
-}
-
-.widget.navigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.navigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.navigation ul.align-right li
-{
-  text-align: right;
-}
-
-.widget.navigation ul li {
-  float: left;
-  display: block;
-  padding-right: 40px;
-}
-
-.widget.navigation ul li a {
-  display: block;
-  font-family: @font-swatch6-font-family;
-  font-size: @font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  letter-spacing: @font-swatch6-letter-spacing;
-  color: @color-swatch1;
-  
-}
-
-.widget.navigation ul li a:hover {
-  text-decoration: none;
-  color: @color-swatch3;
-}
-
-
-/* ===============================
    EXTENDED NAVIGATION
    =============================== */
 
@@ -295,20 +245,6 @@ header .widget.extendednavigation {
 }
 
 
-.widget.extendednavigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.extendednavigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.extendednavigation ul.align-right li
-{
-  text-align: right;
-}
 
 .widget.extendednavigation ul li {
   float: left;
@@ -420,25 +356,6 @@ header .widget.extendednavigation {
   padding: 0px 12px;
 }
 
-.widget.feature h2 {
-  font-family: @font-swatch8-font-family;
-  font-size: @font-swatch8-font-size;
-  font-weight: @font-swatch8-font-weight;
-  line-height: @font-swatch8-line-height;
-  color: @font-swatch8-color;
-  letter-spacing: @font-swatch8-letter-spacing;
-}
-
-/* FEATURE STRAPLINE */
-
-.widget.feature h3 {
-  font-family:@font-swatch9-font-family;
-  font-size:@font-swatch9-font-size;
-  font-weight: @font-swatch9-font-weight;
-  line-height:@font-swatch9-line-height;
-  color: @font-swatch9-color;
-  letter-spacing: @font-swatch9-letter-spacing;
-}
 
 /* FEATURE BUTTON */
 
@@ -556,43 +473,6 @@ header .widget.extendednavigation {
   cursor: pointer;
 }
 
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
-}
-
-.widget.button i {
-    margin-right: 5px;
-}
 
 /* ===============================
   BLOG
@@ -709,144 +589,9 @@ hr.line {
    border: none;
 }
 
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
-}
 
-hr.line.align-center {
-   margin: 20px auto;
-}
 
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
-}
 
-/* ===============================
-   GALLERY WIDGET
-   =============================== */
-
-.widget.gallery {
-    width: 101.2%;
-    margin-left: -0.5%;
-}
-
-.widget.gallery ul {
-    display: block;
-    margin: 0;
-    padding: 0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-}
-
-.widget.gallery li  span.inner {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner {
-    background-size: 100% 100%
-}
-
-.widget.gallery ul li.portrait span.inner {
-    background-size: 100% auto
-}
-
-.widget.gallery ul li.landscape span.inner {
-    background-size: auto 100%
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display: none
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-    content: " ";
-    display: table;
-}
-
-.widget.gallery ul:after {
-    clear: both
-}
-
-.widget.gallery ul {
-    *zoom: 1
-}
-
-.widget.gallery li span.inner .title,
-.widget.gallery li span.inner .description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: -310px;
-    max-height: 284px;
-    background: @color-swatch1;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @color-swatch1;
-    letter-spacing: @font-swatch5-letter-spacing;
-    
-}
-
-.widget.gallery li span.inner:hover .title {
-    margin-bottom: 0
-}
-
-.widget.gallery li span.inner .description {
-    display: none
-}
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* Lightbox */
-
-.lb-data .lb-caption, .lb-data .lb-number {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:lighten(@font-swatch5-color,50%);
-}
-
-.lb-data .lb-number {
-  font-size:bkscale(@font-swatch5-font-size,0.9);
-}
 
 /* =======================================
    CLICK TO CALL
@@ -1002,33 +747,6 @@ hr.line.align-right {
     cursor: pointer;
 }
 
-.widget.contactform fieldset button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.contactform fieldset button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.contactform fieldset button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.contactform fieldset button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.contactform fieldset button.btn.italic {
-    font-style: italic;
-}
-
-.widget.contactform fieldset button.btn.bold {
-    font-weight: bold;
-}
 
 /* ===============================
    REDIRECT WIDGET
