@@ -1,16 +1,19 @@
 /* ===============================
    IMPORT CSS
    =============================== */
-
+   
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 @import "@{templateLocal}/css/common-forms.less";
+@import "@{templateLocal}/css/common-text.less";
 @import "@{templateLocal}/css/widgets-blog.less";
-@import "@{templateLocal}/css/widgets-ecom.less";
 @import "@{templateLocal}/css/widgets-menu.less";
+@import "@{templateLocal}/css/widgets-ecom.less";
 
+// Larget than tablet
 @desktop: ~"only screen and (min-width : 769px)";
-
+// Larger than mobile
+@mobile-up: ~"only screen and (min-width : 480px)";
 
 /* ===============================
    TEMPLATE STYLES
@@ -495,7 +498,7 @@ hr.line {
     background-position: 18px center;
     background-image: image('/images/ic-desktop-call-mob.png');
     background-repeat: no-repeat;
-    @media @desktop {
+    @media @mobile-up {
       padding: 0;
       border: none;
       box-shadow: none;
@@ -530,6 +533,9 @@ hr.line {
       min-height: 140px;
       padding: 20px 0;
       border-bottom: 1px dashed #DDDDDD;
+      @media @mobile {
+        min-height: 100px;
+      }
 
       &:last-child {
         border-bottom: none;
@@ -978,6 +984,9 @@ footer.bk-footer .footer2 .widget.profile form {
    =============================== */
 
 .contactform.widget {
+  fieldset {
+    margin: 0;
+  }
   .form-group {
     margin-bottom: 1em;
   }
@@ -1128,8 +1137,8 @@ footer.bk-footer .footer2 .widget.profile form {
       line-height: bkscale(@font-swatch5-line-height, 1.2);
     
       @media @mobile {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        line-height: bkscale(@font-swatch5-line-height, 0.8);
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
       }
     }
     .description {
@@ -1140,14 +1149,14 @@ footer.bk-footer .footer2 .widget.profile form {
       line-height: bkscale(@font-swatch5-line-height, 1);
       
       @media @mobile {
-        font-size: bkscale(@font-swatch5-font-size, 0.7);
-        line-height: bkscale(@font-swatch5-line-height, 0.8);
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.6);
       }
     }
 
     .title + .description {
       padding-top: 0;
-      margin-top: -1em;
+      margin-top: -0.5em;
     }
   }
 }
@@ -1288,12 +1297,7 @@ footer.bk-footer .footer2 .widget.profile form {
 
 
 
-   /* GALLERY */
-  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    max-height: 180px;
-    font-size:bkscale(@font-swatch5-font-size,0.9);
-    line-height:bkscale(@font-swatch5-line-height,0.9);
-  }
+
 
 
   /* SLIDESHOW */
@@ -1329,13 +1333,7 @@ footer.bk-footer .footer2 .widget.profile form {
     padding: 20px;
   }
 
-  /* GALLERY */
-
-    .widget.gallery ul.gallery-widget li
-    {
-      width: 50%;
-      padding-bottom: 50%;
-    }
+  
 
     /* SLIDESHOW */
 
@@ -1389,12 +1387,7 @@ footer.bk-footer .footer2 .widget.profile form {
 
 
 
- /* GALLERY */
-  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    max-height: 150px;
-    font-size:bkscale(@font-swatch5-font-size,0.9);
-    line-height:bkscale(@font-swatch5-line-height,0.9);
-  }
+
 
   /* FOOTER */
 
