@@ -48,6 +48,10 @@
 	// Open basket
 	.ecombasket-list-container {
 		.clearfix;
+
+		p {
+			padding: 0;
+		}
 		ul {
 			li {
 				position: relative;
@@ -101,6 +105,7 @@
 						font-size: bkscale(@font-swatch5-font-size, 0.8);
 						text-decoration: none;
 						padding: 0 0.6em;
+						border: none;
 						line-height: 1.4;
 						&:hover {
 							 background-color: @font-swatch7-background-color-hover;
@@ -127,7 +132,7 @@
 				}
 			}
 		}
-		.ecombasket-checkout-wrap {
+		.ecombasket-summary-wrap {
 			float: right;
 			margin: 0;
 			@media only screen and (max-width : 460px) {
@@ -899,7 +904,6 @@
 					right: 20px;
 					display: block;
 					top: 20px;
-					height: 30px;
 					line-height: 30px;
 					text-align: center;
 					font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -914,10 +918,8 @@
 				.basket-summary-quantitybtn {
 					background-color: transparent;
 					margin: 0;
-					position: absolute;
+					position: relative;
 					width: 150px;
-					right: 20px;
-					top: 50px;
 					height: 40px;
 					@media @bp-checkout-compact {
 						position: relative;
