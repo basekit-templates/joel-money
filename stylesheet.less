@@ -100,6 +100,9 @@ body {
 
 .header-main .header-main-right {
   float: right;
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .header-main .header-main-right h2 {
@@ -159,8 +162,10 @@ header.bk-header {
     padding: 0;
     z-index:2;
     float: left;
+    max-width: 50%;
     @media @tablet {
       padding: 0 16px;
+      max-width: 100%;
     }
 }
 
@@ -215,12 +220,6 @@ footer.bk-footer {
   }
 }
 
-
-
-
-
-
-
 /* ===============================
    EXTENDED NAVIGATION
    =============================== */
@@ -253,8 +252,6 @@ header.bk-header .widget.extendednavigation {
       }
     }
 }
-
-
 
 .widget.extendednavigation ul li {
   float: left;
@@ -333,10 +330,6 @@ header.bk-header .widget.extendednavigation {
    FEATURE
    =============================== */
 
-.widget.feature {
-
-}
-
 .widget.feature .feature-bgimg {
   height: 450px;
   min-height:initial;
@@ -345,10 +338,6 @@ header.bk-header .widget.extendednavigation {
 .widget.feature .content {
   height: 450px;
   text-align: right;
-}
-
-.widget.feature .content .spare {
-
 }
 
 /* FEATURE TITLE */
@@ -379,7 +368,8 @@ header.bk-header .widget.extendednavigation {
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
 
-  padding: 6px 20px 6px 8px;
+  padding: 6px 26px 6px 8px;
+  background-size: 18px;
   margin: 0;
   border: none;
   background-image: image('/images/button-arrow.png');
@@ -1161,15 +1151,6 @@ footer.bk-footer .footer2 .widget.profile form {
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* ===============================
    IPAD WIDTH
    =============================== */
@@ -1211,10 +1192,10 @@ footer.bk-footer .footer2 .widget.profile form {
         }
     }
 
-    .widget .extendednavigation li {
+    .widget .extendednavigation ul li {
         width: 100%;
         padding: 0px;
-      
+        border-top: 1px solid darken(@color-swatch7,8%);
     }
 
     .widget.extendednavigation ul li.folder {
@@ -1277,10 +1258,6 @@ footer.bk-footer .footer2 .widget.profile form {
 
   /* OTHER */
 
-  header h2 {
-    display: none;
-  }
-
   section.feature-row .columns-two-right {
     display: none;
   }  
@@ -1292,13 +1269,6 @@ footer.bk-footer .footer2 .widget.profile form {
   footer.bk-footer section.footer2 {
     padding: 2em 0 .8em;
   }
-
-
-
-
-
-
-
 
   /* SLIDESHOW */
 
@@ -1369,10 +1339,6 @@ footer.bk-footer .footer2 .widget.profile form {
   .widget.feature h3 {
     font-size: bkscale(@font-swatch9-font-size,0.8);
     line-height: bkscale(@font-swatch9-line-height,0.9);
-  }
-
-  .header-main-right {
-    display: none;
   }
 
   .header-sub {
