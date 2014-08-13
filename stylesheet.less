@@ -104,8 +104,9 @@ body {
 
 .header-main .header-main-right {
   float: right;
-  @media @tablet {
+  @media @mobile {
     width: 100%;
+    float: left;
   }
 }
 
@@ -121,6 +122,9 @@ body {
 
 .header-main .header-main-right .widget.button button {
   margin: 0 0 0 20px;
+  @media @mobile {
+    margin: 10px 0 0;
+  }
 }
 
 .header-main .header-main-right ul {
@@ -130,6 +134,9 @@ body {
 .header-main .header-main-right ul li {
   display: inline-block;
   float: left;
+  @media @tablet {
+    display: block;
+  }
 }
 
 /* SUB NAV */
