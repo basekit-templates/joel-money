@@ -70,6 +70,10 @@ body {
    CUSTOM CSS
    =============================== */
 
+.widget.button, .widget.paypalbuynow, .widget.tweet, .widget.dropbox, .widget.clicktocall {
+  margin: 0;
+}
+
 .main-content.wrapper {
   padding: 20px;
   background-color: @color-swatch1;
@@ -628,7 +632,7 @@ hr.line {
    TWEET THIS
    =============================== */
 
-
+.widget.tweet { padding: 0 }
 
 .widget.tweet a {
   background-image: image('/images/twitter.png');
@@ -1078,14 +1082,17 @@ footer.bk-footer .footer2 .widget.profile form {
       }
     }
 
-
     // Button play
     .btn-play {
+      opacity: 0.5;
       background-color:  @color-swatch3;
       color: @color-swatch1;
       min-width: 30px;
+      margin: auto;
       top: 0;
       left: 0;
+      bottom: 0;
+      right: 0;
       width: 60px;
      
       @media @mobile {
@@ -1095,6 +1102,9 @@ footer.bk-footer .footer2 .widget.profile form {
         -ms-transform: scale(0.75);
         transform: scale(0.75);
       }
+      &.pause {
+        opacity: 1;
+      }
       &:after {
         font-size: 16px;
         @media @tablet {
@@ -1102,7 +1112,7 @@ footer.bk-footer .footer2 .widget.profile form {
         }
       }
       &:hover {
-        background-color: darken(@color-swatch2, 10%);
+        background-color: darken(@color-swatch3, 6%);
       }
     }
   }
