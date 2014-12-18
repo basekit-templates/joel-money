@@ -129,6 +129,9 @@ body {
 
 .header-main .header-main-right ul {
   margin: 13px 0 0;
+  @media @mobile {
+    margin:0;
+  }
 }
 
 .header-main .header-main-right ul li {
@@ -136,6 +139,9 @@ body {
   float: left;
   @media @tablet {
     display: block;
+  }
+  @media @mobile {
+    float:initial;
   }
 }
 
