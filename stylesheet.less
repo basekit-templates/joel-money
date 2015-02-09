@@ -1,7 +1,7 @@
 /* ===============================
    IMPORT CSS
    =============================== */
-   
+
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 @import "@{templateLocal}/css/common-forms.less";
@@ -260,7 +260,7 @@ header.bk-header .widget.extendednavigation {
   margin: 0;
 }
 
-@media @tablet { 
+@media @tablet {
   .widget.extendednavigation a.pull {
     top: 0;
     right: 0;
@@ -292,7 +292,7 @@ header.bk-header .widget.extendednavigation {
   letter-spacing: @font-swatch6-letter-spacing;
   color: @font-swatch6-color;
   line-height: @font-swatch6-line-height;
-  
+
 }
 
 .widget.extendednavigation ul li:hover {
@@ -365,7 +365,7 @@ header.bk-header .widget.extendednavigation {
 
 .widget.feature h2 span, .widget.feature h3 span {
   display: inline-block;
-  background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.7); 
+  background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.7);
 }
 
 .widget.feature h2 span {
@@ -428,6 +428,9 @@ header.bk-header .widget.extendednavigation {
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
+    .more, .less {
+        color: @font-swatch7-color;
+    }
 }
 
 .widget.content span.expand:hover,
@@ -465,7 +468,7 @@ header.bk-header .widget.extendednavigation {
     font-weight: @font-swatch4-font-weight;
     font-size: @font-swatch4-font-size;
     text-align: center;
-    
+
     line-height: @font-swatch4-line-height;
 }
 
@@ -552,7 +555,7 @@ hr.line {
         border-bottom: none;
         margin-bottom: 0;
       }
-     
+
       // footer
       a, time + span, time {
         font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -577,7 +580,7 @@ hr.line {
           width: (@twitterProfilePicSize * 0.55);
           height: (@twitterProfilePicSize * 0.55);
         }
-        
+
         img {
           width: 100%;
           height: auto;
@@ -732,7 +735,7 @@ footer .footer2 .widget.profile .bk-profile-socialicons {
 }
 
 .widget.socialicons span a:hover,
-.widget.profile 
+.widget.profile
 .bk-profile-socialicons span a:hover {
     background-color: @font-swatch7-background-color-hover
 }
@@ -814,7 +817,7 @@ footer .footer2 .widget.profile .bk-profile-socialicons {
     color: @font-swatch6-color;
     line-height: @font-swatch5-line-height;
     font-weight: @font-swatch5-font-weight;
-  } 
+  }
 }
 
 
@@ -854,9 +857,9 @@ footer.bk-footer .footer2 .widget.profile form {
 
 // ======= Widget: Sign up form
 .widget.signupform {
- 
 
-  
+
+
   .widget.signupform fieldset {
     padding: 0;
     border: 0;
@@ -895,7 +898,7 @@ footer.bk-footer .footer2 .widget.profile form {
       -ms-flex-align: center;
       align-items: center;
 
-     
+
 
       label {
         // Flex
@@ -956,7 +959,7 @@ footer.bk-footer .footer2 .widget.profile form {
     }
   }
 }
-  
+
 
  /* GALLERY */
 .widget.gallery {
@@ -1017,9 +1020,9 @@ footer.bk-footer .footer2 .widget.profile form {
     padding-top: 20px;
     padding-bottom: 40px;
     margin-top: 0;
-    -webkit-user-select: none;  
-    -moz-user-select: none;     
-    -ms-user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     @media @mobile {
       padding-top: 5px;
       padding-bottom: 5px;
@@ -1043,8 +1046,8 @@ footer.bk-footer .footer2 .widget.profile form {
     }
   }
   .slideshow-widget {
-    -webkit-user-select: none;  
-    -moz-user-select: none;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
 
     // Buttons prev/next
@@ -1063,7 +1066,7 @@ footer.bk-footer .footer2 .widget.profile form {
         -ms-transform: scale(0.75);
         transform: scale(0.75);
       }
-      
+
       &:after {
         display: block;
         content: "";
@@ -1077,7 +1080,7 @@ footer.bk-footer .footer2 .widget.profile form {
         position: absolute;
         top: 50%;
         margin: -17px 0 0 -17px;
-        
+
       }
       &:hover:after {
         background-color: darken(@color-swatch2, 10%);
@@ -1111,7 +1114,7 @@ footer.bk-footer .footer2 .widget.profile form {
       bottom: 0;
       right: 0;
       width: 60px;
-     
+
       @media @mobile {
         -webkit-transform: scale(0.75);
         -moz-transform: scale(0.75);
@@ -1140,7 +1143,7 @@ footer.bk-footer .footer2 .widget.profile form {
     left:0;
     right:0;
     top:auto;
-    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1); 
+    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch4,10%)), 1);
     .title, .description {
       display: inline-block;
       float: left;
@@ -1152,7 +1155,7 @@ footer.bk-footer .footer2 .widget.profile form {
       font-family: @font-swatch8-font-family;
       font-size: bkscale(@font-swatch5-font-size, 1.2);
       line-height: bkscale(@font-swatch5-line-height, 1.2);
-    
+
       @media @mobile {
         font-size: bkscale(@font-swatch5-font-size, 0.9);
         line-height: bkscale(@font-swatch5-line-height, 0.9);
@@ -1161,10 +1164,10 @@ footer.bk-footer .footer2 .widget.profile form {
     .description {
       color: @color-swatch2;
       clear: both;
-     
+
       font-size: bkscale(@font-swatch5-font-size, 1);
       line-height: bkscale(@font-swatch5-line-height, 1);
-      
+
       @media @mobile {
         font-size: bkscale(@font-swatch5-font-size, 0.8);
         line-height: bkscale(@font-swatch5-line-height, 0.6);
@@ -1211,7 +1214,7 @@ footer.bk-footer .footer2 .widget.profile form {
     .widget .extendednavigation ul {
         width: 100%;
         display: none;
-        padding: 0px; 
+        padding: 0px;
         margin-top: 40px;
         li {
             border-bottom: none;
@@ -1288,11 +1291,11 @@ footer.bk-footer .footer2 .widget.profile form {
 
   section.feature-row .columns-two-right {
     display: none;
-  }  
+  }
 
   section.feature-row .columns-two-left {
     margin-bottom: 0;
-  } 
+  }
 
   footer.bk-footer section.footer2 {
     padding: 2em 0 .8em;
@@ -1300,7 +1303,7 @@ footer.bk-footer .footer2 .widget.profile form {
 
   /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-image-list,
     .widget.responsiveslideshow .slideshow-widget {
         height:350px;
         min-height:initial;
@@ -1331,11 +1334,11 @@ footer.bk-footer .footer2 .widget.profile form {
     padding: 20px;
   }
 
-  
+
 
     /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-image-list,
     .widget.responsiveslideshow .slideshow-widget {
         height:280px;
     }
