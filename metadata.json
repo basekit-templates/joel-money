@@ -1,7 +1,7 @@
 {
 	"name":"Joel Money",
 	"thumbnail":"joel-money.png",
-	"screenshot":"joel-money.png",
+	"screenshot":"joel-money-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
