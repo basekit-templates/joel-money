@@ -4,6 +4,7 @@
 // Buttons
 .widget.feature .feature-bgimg .content button,
 .contactform button.btn,
+.advancedcontactform fieldset button,
 .widget.button button,
 .widget .btn,
 .widget.profile form button,
@@ -87,7 +88,10 @@
 .productlist-filter .productlist-search input,
 .signupform fieldset input,
 .fonectacontactform input,
-.fonectacontactform textarea {
+.fonectacontactform textarea,
+.advancedcontactform form input[type=email], 
+.advancedcontactform form input[type=text],
+.advancedcontactform form select {
 	background-color: @color-swatch1;
 	border: 1px solid lighten(@color-swatch5,10%);
 	padding: 0 1em;
@@ -98,9 +102,6 @@
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
-
-
-
 
 	@media only screen and (max-width : 460px) {
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
@@ -118,12 +119,22 @@
 	}
 }
 
+.advancedcontactform form select {
+	width: 100%;
+}
+
 .contactform textarea,
-.fonectacontactform textarea {
+.fonectacontactform textarea,
+.advancedcontactform fieldset textarea {
 	line-height: bkscale(@font-swatch7-line-height, 0.7);
 	min-height: 10em;
 	padding-top: 0.6em;
 	padding-bottom: 0.6em;
+
+	&:hover {
+		border-color: darken(@font-swatch7-background-color, 6%);
+	}
+
 	@media only screen and (max-width : 460px) {
 		line-height: bkscale(@font-swatch7-line-height, 0.5);
 		padding-top: 0.5em;
@@ -137,7 +148,10 @@
 .blog-search-form label,
 .widget.ecomcheckout .delivery label,
 .ecom-product-vartitle,
-.fonectacontactform label {
+.fonectacontactform label,
+.widget.contactform fieldset label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
     font-family:@font-swatch4-font-family;
     font-size:@font-swatch4-font-size;
     font-weight:@font-swatch4-font-weight;
