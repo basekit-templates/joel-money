@@ -3,6 +3,7 @@
 	"thumbnail":"joel-money.png",
 	"screenshot":"joel-money-screenshot.jpg",
 	"templateType":"standard",
+    "versionTenCompatible": 1,
     "pageTypes": ["home"],
     "tags": {
     "en": ["colorful", "bright", "political", "organisation", "modern", "colourful", "professional", "corporate", "campaign", "democrat", "politician", "elegant", "candidate", "debate", "politics", "voters", "election", "social"],
