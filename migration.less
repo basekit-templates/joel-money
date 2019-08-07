@@ -1,0 +1,112 @@
+
+#migrated-site {
+
+
+
+
+    //  Template - Stylesheet overrides
+    // ---------------------------------
+
+
+    // Resets container only for the main zone content wrapper
+    .main-content.wrapper {
+
+        @media @mobile {
+            padding: 0;
+        }
+    }
+
+
+    // Removed spacing from the main content wrapper below the feature
+    .main-content.wrapper + .main-content {
+        padding-top: 0;
+    }
+
+
+    .main-content .content-bg {
+        margin-top: 0;
+        padding: 0;
+    }
+
+
+
+
+    //  Migration - Container & Spacing
+    // -----------------------------------
+     
+
+    // Readds wrapper values to widgets that aren't sections
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not(.row),
+    .row:not(.widget):not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 960px;
+        width: ~'calc(100% - 60px)';
+
+        @media @mobile {
+            width: ~'calc(100% - 40px)';
+        }
+    }
+
+
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > .row + .widget:not(.row) {
+        margin-top: 20px;
+    }
+
+
+    // Adds spacing to a widget when a section follows it
+    #page-zones__main > .widget:not(.row) + .row {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    // Readds spacing to the first widget in the zone - these values should replicate what was on the .main class in the template
+    .edit #page-zones__main-overlay + .widget:not(.row),
+    #page-zones__main > .widget:not(.row):first-child {
+        padding-top: 30px;
+        
+        @media @mobile {
+            padding-top: 20px;
+        }
+    }
+
+
+    // As above but for sections only
+    #page-zones__main > .widget.row:last-child  {
+        margin-bottom: 0;
+    }
+     
+     
+    // Readds spacing to the last widget in the zone - these values should replicate what was on the .main class in the template
+    #page-zones__main > .widget:not(.row):last-child {
+        padding-bottom: 40px;
+
+        @media @mobile {
+            padding-bottom: 20px;
+        }
+    }
+
+
+
+
+    //  Migration - Editor UI
+    // -----------------------------------
+
+
+    // Moves section controls over the site border
+    .top-level-overlay, 
+    .row-overlay {
+        left: -120px;
+        right: -120px;
+
+        // Removes opaque bar from row UI as it doesn't align to the edge of the canvas
+        &:before,
+        &:after {
+            background-color: transparent;
+        }
+    }
+}
