@@ -61,10 +61,14 @@
     #page-zones__main > .widget:not(.row) + .row {
         margin-bottom: 20px;
         margin-top: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
     }
 
 
-    // Readds spacing to the first widget in the zone - these values should replicate what was on the .main class in the template
+    // Readds spacing to the first widget in the zone
     .edit #page-zones__main-overlay + .widget:not(.row),
     #page-zones__main > .widget:not(.row):first-child {
         padding-top: 30px;
@@ -73,15 +77,9 @@
             padding-top: 20px;
         }
     }
-
-
-    // As above but for sections only
-    #page-zones__main > .widget.row:last-child  {
-        margin-bottom: 0;
-    }
      
      
-    // Readds spacing to the last widget in the zone - these values should replicate what was on the .main class in the template
+    // Readds spacing to the last widget in the zone
     #page-zones__main > .widget:not(.row):last-child {
         padding-bottom: 40px;
 
