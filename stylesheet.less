@@ -658,20 +658,24 @@ hr.line {
 .widget.tweet { padding: 0 }
 
 .widget.tweet a {
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 15px center;
   // intentionally hard coded colours
   background-color: #00bdef;
   color: #fff;
   box-shadow: 0 4px darken(#00bdef,10%);
+  position: relative;
+}
+
+.widget.tweet a:before {
+  content: '\f099';
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  left: 15px;
+  position: absolute;
 }
 
 .widget.tweet a:hover, .tweet a:active {
   background-color: #00b4e3;
-  background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 15px center;
+  background-image: none;
   cursor: pointer;
 }
 
@@ -745,11 +749,6 @@ footer .footer2 .widget.profile .bk-profile-socialicons {
 
 /* SVG ICONS */
 
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter.svg');
-}
-
 .svg .widget.socialicons span.bk-socialicons-linkedin a,
 .svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
     background-image: image('/images/social/socialicons-linkedin.svg')
@@ -776,11 +775,6 @@ footer .footer2 .widget.profile .bk-profile-socialicons {
 }
 
 /* PNG ICONS */
-
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter.png');
-}
 
 .widget.socialicons span.bk-socialicons-linkedin a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
